@@ -9,9 +9,11 @@ export const HeaderLeft = styled.div`
 export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
-  padding-bottom: 30px;
+  align-items: center;
+  margin-bottom: 20px;
 
   @media (max-width: 1000px) {
+    align-items: center;
   }
 
   a {
@@ -20,22 +22,36 @@ export const HeaderContainer = styled.header`
 `;
 
 export const ProfilePic = styled.img`
-  width: 80px;
-  height: 80px;
-  border-radius: 10%;
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
   object-fit: cover;
 `;
 
 export const IconContainer = styled.div`
   display: flex;
-  column-gap: 4rem;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
+  column-gap: 2.5rem;
+  padding-top: 10px;
 
   a {
-    text-decoration: none;
     color: #000;
+  }
+
+  @media (max-width: 800px) {
+    & {
+      position: absolute;
+      display: (${(props) => (!props.mobNav ? "none" : "block")});
+      z-index: 1;
+      top: -1px;
+      right: -1px;
+      flex-direction: column;
+      align-items: start;
+      background-color: black;
+      width: 90vw;
+      height: 90vh;
+      padding-top: 20px;
+      border-radius: 0 0 0 20px;
+    }
   }
 `;
 
@@ -43,21 +59,49 @@ export const IconSpecificContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 0.5rem;
+  padding: 0rem 0.5rem;
   padding-bottom: 1.5rem;
   border-radius: 20px;
+  transition: all 0.2s ease-in-out;
 
-  &:hover {
-    opacity: 1;
+  @media (max-width: 800px) {
+    & {
+      padding-left: 30px;
+      flex-direction: row;
+      column-gap: 2rem;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
   }
 `;
 
 export const IconStyle = styled.img`
-  height: 70px;
-  width: 70px;
-  padding: 15px;
+  height: 35px;
+  width: 35px;
+  margin-bottom: 8px;
 `;
 
 export const IconText = styled.h3`
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+
+  @media (max-width: 800px) {
+    & {
+      color: white;
+    }
+  }
+`;
+
+// Mobile Navigation
+
+export const MobMenu = styled.div`
+  display: none;
+
+  @media (max-width: 800px) {
+    & {
+      display: block;
+      z-index: 10;
+    }
+  }
 `;

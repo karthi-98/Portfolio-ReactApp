@@ -1,5 +1,6 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { AMTitle, AboutMeContainer } from "../Styles/Aboutme/Aboutme";
 
 const Aboutme = () => {
   const app = useRef();
@@ -17,9 +18,18 @@ const Aboutme = () => {
   }, []);
 
   return (
-    <div ref={app} style={{ overflow: "hidden" }}>
-      <h1 className="main">Hi, this is Karthick</h1>
-    </div>
+    <AboutMeContainer>
+      <AMTitle>
+        <span> Hi buddy, this is</span> Karthick
+      </AMTitle>
+      <div
+        style={{
+          width: "80vw",
+          height: "70vh",
+          borderRadius: "100px",
+        }}
+      ></div>
+    </AboutMeContainer>
   );
 };
 
