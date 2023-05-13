@@ -3,9 +3,11 @@ import { NavText, NavContainer } from "../Styles/Styled Comp/SC_Nav";
 import { NavLink } from "react-router-dom";
 import "../index.css";
 import { gsap } from "gsap";
+import useNav from "../Hooks/useNav";
 
 const Nav = () => {
   const appRef = useRef();
+  const { navPos, changePosition } = useNav();
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -24,8 +26,9 @@ const Nav = () => {
 
   return (
     <div ref={appRef}>
-      <NavContainer>
+      <NavContainer pos={navPos}>
         <NavLink
+          onClick={() => changePosition("center")}
           to="/"
           className={({ isActive }) =>
             isActive ? "active nav" : "notActive nav"
@@ -35,6 +38,7 @@ const Nav = () => {
           <NavText>Home</NavText>
         </NavLink>
         <NavLink
+          onClick={() => changePosition("left")}
           to="/education"
           className={({ isActive }) =>
             isActive ? "active nav" : "notActive nav"
@@ -43,14 +47,16 @@ const Nav = () => {
           <NavText>Education</NavText>
         </NavLink>
         <NavLink
+          onClick={() => changePosition("center")}
           to="/projects"
           className={({ isActive }) =>
             isActive ? "active nav" : "notActive nav"
           }
         >
-          <NavText>Projects</NavText>
+          <NavText>Projects & Skills</NavText>
         </NavLink>
         <NavLink
+          onClick={() => changePosition("center")}
           to="/certifications"
           className={({ isActive }) =>
             isActive ? "active nav" : "notActive nav"
@@ -59,6 +65,7 @@ const Nav = () => {
           <NavText>Certifications</NavText>
         </NavLink>
         <NavLink
+          onClick={() => changePosition("center")}
           to="/about_site"
           className={({ isActive }) =>
             isActive ? "active nav" : "notActive nav"

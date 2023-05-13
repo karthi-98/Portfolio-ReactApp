@@ -55,7 +55,7 @@ const Home = () => {
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 3fr",
-          paddingTop: "5rem",
+          paddingTop: "8rem",
         }}
       >
         <div></div>
@@ -68,16 +68,16 @@ const Home = () => {
             alignItems: "center",
           }}
         >
-          <div
+          {/* <div
             style={{
               top: "20%",
               height: "20vh",
               width: "50vw",
-              backgroundImage: "radial-gradient(#21cbff 50%,#061118 40%)",
-              filter: "blur(200px)",
+              // backgroundImage: "radial-gradient(#21cbff 50%,#061118 40%)",
+              // filter: "blur(200px)",
               position: "absolute",
             }}
-          ></div>
+          ></div> */}
           <p
             className="name"
             style={{
@@ -86,22 +86,19 @@ const Home = () => {
               color: COLOR.white,
             }}
           >
-            Welcome, this is{" "}
-            <span style={{ color: COLOR.orange }}>Karthick</span>
+            Hi, I'm
+            <span style={{ color: COLOR.orange }}> Karthick 👋</span>
           </p>
           <div
             className="profile"
             style={{
               width: "60%",
               height: "60vh",
-              border: `5px solid ${COLOR.white}`,
+              // border: `5px solid ${COLOR.white}`,
               borderRadius: "60px",
               textAlign: "center",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
               rowGap: "2rem",
-              padding: "0 5rem",
+              // padding: "0 5rem",
             }}
           >
             <p
@@ -114,10 +111,13 @@ const Home = () => {
                 wordSpacing: "3px",
               }}
             >
-              Having two years of experience as Project Engineer in Wipro.
-              Proven efficiency with an ability to quickly learn and creating an
-              environment for developing, quality assurance, staging and
-              deploying in production work can proceed efficiently and securely.
+              <q>
+                Having two years of experience as Project Engineer in Wipro.
+                Proven efficiency with an ability to quickly learn and creating
+                an environment for developing, quality assurance, staging and
+                deploying in production work can proceed efficiently and
+                securely
+              </q>
             </p>
           </div>
         </div>

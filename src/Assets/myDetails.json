@@ -1,0 +1,26 @@
+{
+  "education": [
+    {
+      "institution": "Velalar College of Engineering and Technology",
+      "degree": "BE Computer Science and Engineering",
+      "percentage": "CGPA",
+      "marks": "83%",
+      "year": "2016-2020"
+    },
+    {
+      "institution": "S.V.N Matriculation Hr. Sec School",
+      "degree": "HSA",
+      "percentage": "Percentage",
+      "marks": "80%",
+      "year": "2016"
+    },
+
+    {
+      "institution": "S.V.N Matriculation Hr. Sec School",
+      "degree": "SSLC",
+      "percentage": "Percentage",
+      "marks": "93%",
+      "year": "2014"
+    }
+  ]
+}
