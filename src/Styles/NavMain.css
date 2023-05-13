@@ -1,9 +1,0 @@
-.mobNavi {
-  display: none;
-}
-
-@media (max-width: 1000px) {
-  .mobNavi {
-    display: none;
-  }
-}

@@ -1,37 +1,44 @@
 import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import Aboutme from "./Components/Aboutme";
-import Eduqu from "./Components/Eduqu";
-import Projects from "./Components/Projects";
+import Home from "./Components/Home";
+import ErrorPage from "./Components/ErrorPage";
 import RootMain from "./Components/RootMain";
-import Errorpage from "./Components/ErrorPage";
-import Aboutsite from "./Components/Aboutsite";
+import Education from "./Components/Education";
+import AnimationTest from "./Components/AnimationTest";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <RootMain />,
-      errorElement: <Errorpage />,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: "",
-          element: <Aboutme />,
+          element: <Home />,
         },
         {
           path: "education",
-          element: <Eduqu />,
+          element: <Education />,
+        },
+        {
+          path: "certifications",
+          element: <Home />,
         },
         {
           path: "projects",
-          element: <Projects />,
+          element: <Home />,
         },
         {
-          path: "aboutsite",
-          element: <Aboutsite />,
+          path: "about_site",
+          element: <Home />,
         },
       ],
+    },
+    {
+      path: "/animation",
+      element: <AnimationTest />,
     },
   ]);
 

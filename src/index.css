@@ -6,7 +6,7 @@
 
 html {
   font-size: 62.5%;
-  background-color: #1a120b;
+  background-color: #061118;
 }
 
 body {
@@ -14,4 +14,12 @@ body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.active {
+  color: #f66b0e;
+}
+
+.notActive {
+  color: #eee;
 }
