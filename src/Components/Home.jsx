@@ -39,17 +39,18 @@ const Home = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          rowGap: "6rem",
+          rowGap: "3rem",
           width: "100%",
           alignItems: "center",
         }}
       >
         <img
+          className="profilePic"
           alt="My Profile"
           src={ICONS.myImg}
           style={{
-            width: "150px",
-            height: "150px",
+            width: "125px",
+            height: "125px",
             objectFit: "cover",
             borderRadius: "30px",
           }}
@@ -76,7 +77,7 @@ const Home = () => {
           Hi, I'm
           <span style={{ color: COLOR.orange }}> Karthick 👋</span>
         </p>
-        <div
+        {/* <div
           className="profile"
           style={{
             width: "60%",
@@ -87,27 +88,28 @@ const Home = () => {
             rowGap: "2rem",
             // padding: "0 5rem",
           }}
+        > */}
+        <p
+          className="profile"
+          style={{
+            width: "50%",
+            color: COLOR.white,
+            fontSize: FONTSIZE.xlarge,
+            textAlign: "center",
+            lineHeight: "3.5",
+            wordSpacing: "3px",
+          }}
         >
-          <p
-            className="profileText"
-            style={{
-              color: COLOR.white,
-              fontSize: FONTSIZE.xlarge,
-              textAlign: "center",
-              lineHeight: "3.5",
-              wordSpacing: "3px",
-            }}
-          >
-            <q>
-              Having two years of experience as Project Engineer in Wipro.
-              Proven efficiency with an ability to quickly learn and creating an
-              environment for developing, quality assurance, staging and
-              deploying in production work can proceed efficiently and securely
-            </q>
-          </p>
-        </div>
+          <q>
+            Having two years of experience as Project Engineer in Wipro. Proven
+            efficiency with an ability to quickly learn and creating an
+            environment for developing, quality assurance, staging and deploying
+            in production work can proceed efficiently and securely
+          </q>
+        </p>
       </div>
     </div>
+    // </div>s
   );
 };
 

@@ -23,13 +23,13 @@ const EducationDetails = (props) => {
         }}
       >
         <p>
-          <span style={{ color: COLOR.orange, fontWeight: 600 }}>
+          <span style={{ color: COLOR.violet, fontWeight: 600 }}>
             {props.details.percentage}
           </span>
           - {props.details.marks}
         </p>
         <p>
-          <span style={{ color: COLOR.orange, fontWeight: 600 }}>Year</span> -{" "}
+          <span style={{ color: COLOR.violet, fontWeight: 600 }}>Year</span> -{" "}
           {props.details.year}
         </p>
       </div>

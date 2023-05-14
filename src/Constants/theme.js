@@ -5,6 +5,8 @@ const COLOR = {
   // white: "black",
   orange: "#F66B0E",
   lightOrange: "#868e96",
+  green: "#40c057",
+  violet: "rgba(174, 62, 201, 0.7)",
 };
 
 const FONTSIZE = {

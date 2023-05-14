@@ -5,10 +5,10 @@ import useNav from "../../Hooks/useNav";
 export const NavContainer = styled.nav`
   display: flex;
   column-gap: 3rem;
-  justify-content: end;
-  padding: ${(props) => (props.pos ? "8vh 20vw 0 0" : "5vh 0 0 0")};
+  justify-content: center;
   align-items: center;
-  justify-content: ${(props) => !props.pos && "center"};
+  margin-top: 3rem;
+  margin-left: 5rem;
 
   a {
     text-decoration: none;
