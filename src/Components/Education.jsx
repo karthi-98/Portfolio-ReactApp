@@ -3,27 +3,15 @@ import { COLOR, FONTSIZE } from "../Constants/theme";
 import { gsap } from "gsap";
 import dataJson from "../Assets/myDetails.json";
 import EducationDetails from "./EducationDetails";
+import Line from "../Styles/Line";
 
 const Education = () => {
   const appRef = useRef();
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        ".line",
-        {
-          width: "0vw",
-          marginLeft: "50vw",
-        },
-        {
-          marginLeft: "0vw",
-
-          width: "100vw",
-          duration: 2,
-        }
-      );
       gsap.from(".edu", {
         opacity: 0,
-        y: 50,
+        y: 100,
         duration: 1,
         delay: 0.5,
         stagger: 0.5,
@@ -35,23 +23,20 @@ const Education = () => {
 
   return (
     <div ref={appRef}>
-      <div
-        className="line"
-        style={{
-          margin: "30px 0",
-          height: "1px",
-          backgroundImage:
-            "linear-gradient(90deg,rgba(0, 0, 0, 0), rgba(174, 62, 201, .7), rgba(0, 0, 0, 0))",
-        }}
-      ></div>
+      <Line color={"violet"} />
       <div style={{ color: `${COLOR.white}` }}>
         <div style={{ margin: "0 auto", width: "70vw" }}>
-          <h1
-            className="edu"
-            style={{ margin: "5rem 0", fontSize: FONTSIZE.xxxlarge }}
+          <div
+            style={{
+              overflow: "hidden",
+              height: "4rem",
+              margin: "2rem 0",
+            }}
           >
-            Educational Details
-          </h1>
+            <h1 className="edu" style={{ fontSize: FONTSIZE.xxxlarge }}>
+              Educational Details
+            </h1>
+          </div>
           <ul
             style={{
               display: "flex",

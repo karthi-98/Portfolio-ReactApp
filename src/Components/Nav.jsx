@@ -47,8 +47,8 @@ const Nav = () => {
           <NavText>Education</NavText>
         </NavLink>
         <NavLink
-          onClick={() => changePosition("center")}
-          to="/projects"
+          onClick={() => changePosition("left")}
+          to="/projects&skills"
           className={({ isActive }) =>
             isActive ? "active nav" : "notActive nav"
           }
@@ -56,7 +56,7 @@ const Nav = () => {
           <NavText>Projects & Skills</NavText>
         </NavLink>
         <NavLink
-          onClick={() => changePosition("center")}
+          onClick={() => changePosition("left")}
           to="/certifications"
           className={({ isActive }) =>
             isActive ? "active nav" : "notActive nav"
@@ -65,7 +65,7 @@ const Nav = () => {
           <NavText>Certifications</NavText>
         </NavLink>
         <NavLink
-          onClick={() => changePosition("center")}
+          onClick={() => changePosition("left")}
           to="/about_site"
           className={({ isActive }) =>
             isActive ? "active nav" : "notActive nav"

@@ -6,6 +6,8 @@ import ErrorPage from "./Components/ErrorPage";
 import RootMain from "./Components/RootMain";
 import Education from "./Components/Education";
 import AnimationTest from "./Components/AnimationTest";
+import ProjSkills from "./Components/Projects & Skills/ProjSkills";
+import Certifications from "./Components/Certifications";
 
 function App() {
   const router = createBrowserRouter([
@@ -24,11 +26,11 @@ function App() {
         },
         {
           path: "certifications",
-          element: <Home />,
+          element: <Certifications />,
         },
         {
-          path: "projects",
-          element: <Home />,
+          path: "projects&skills",
+          element: <ProjSkills />,
         },
         {
           path: "about_site",
