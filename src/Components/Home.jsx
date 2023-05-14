@@ -2,12 +2,19 @@ import React, { useLayoutEffect, useRef } from "react";
 import { COLOR, FONTSIZE, ICONS } from "../Constants/theme";
 import { gsap } from "gsap";
 import { Power4 } from "gsap";
+import Line from "../Styles/Line";
 
 const Home = () => {
   const refObj = useRef();
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
+      gsap.from(".profilePic", {
+        opacity: 0,
+        duration: 1,
+        delay: 0.5,
+        ease: Power4.easeInOut,
+      });
       gsap.from(".name", {
         opacity: 0,
         duration: 1,
@@ -27,48 +34,28 @@ const Home = () => {
 
   return (
     <div ref={refObj}>
+      <Line color="orange" />
       <div
         style={{
-          position: "absolute",
-          width: "20vw",
-          height: "60vh",
-          objectFit: "cover",
-          top: "0%",
-          borderRadius: "0 0  50% 0",
-          borderRight: `2px solid ${COLOR.orange}`,
-          overflow: "hidden",
-          paddingRight: "100px",
+          display: "flex",
+          flexDirection: "column",
+          rowGap: "6rem",
+          width: "100%",
+          alignItems: "center",
         }}
       >
         <img
           alt="My Profile"
           src={ICONS.myImg}
           style={{
-            width: "20vw",
-            height: "60vh",
-            padding: "0 10px 10px 0",
-            borderRadius: "0 0  50% 0",
+            width: "150px",
+            height: "150px",
+            objectFit: "cover",
+            borderRadius: "30px",
           }}
         />
-      </div>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 3fr",
-          paddingTop: "8rem",
-        }}
-      >
-        <div></div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            rowGap: "6rem",
-            width: "100%",
-            alignItems: "center",
-          }}
-        >
-          {/* <div
+
+        {/* <div
             style={{
               top: "20%",
               height: "20vh",
@@ -78,48 +65,46 @@ const Home = () => {
               position: "absolute",
             }}
           ></div> */}
+        <p
+          className="name"
+          style={{
+            fontSize: FONTSIZE.xxxxlarge,
+            fontWeight: "600",
+            color: COLOR.white,
+          }}
+        >
+          Hi, I'm
+          <span style={{ color: COLOR.orange }}> Karthick 👋</span>
+        </p>
+        <div
+          className="profile"
+          style={{
+            width: "60%",
+            height: "60vh",
+            // border: `5px solid ${COLOR.white}`,
+            borderRadius: "60px",
+            textAlign: "center",
+            rowGap: "2rem",
+            // padding: "0 5rem",
+          }}
+        >
           <p
-            className="name"
+            className="profileText"
             style={{
-              fontSize: FONTSIZE.xxxxlarge,
-              fontWeight: "600",
               color: COLOR.white,
-            }}
-          >
-            Hi, I'm
-            <span style={{ color: COLOR.orange }}> Karthick 👋</span>
-          </p>
-          <div
-            className="profile"
-            style={{
-              width: "60%",
-              height: "60vh",
-              // border: `5px solid ${COLOR.white}`,
-              borderRadius: "60px",
+              fontSize: FONTSIZE.xlarge,
               textAlign: "center",
-              rowGap: "2rem",
-              // padding: "0 5rem",
+              lineHeight: "3.5",
+              wordSpacing: "3px",
             }}
           >
-            <p
-              className="profileText"
-              style={{
-                color: COLOR.white,
-                fontSize: FONTSIZE.xlarge,
-                textAlign: "center",
-                lineHeight: "3.5",
-                wordSpacing: "3px",
-              }}
-            >
-              <q>
-                Having two years of experience as Project Engineer in Wipro.
-                Proven efficiency with an ability to quickly learn and creating
-                an environment for developing, quality assurance, staging and
-                deploying in production work can proceed efficiently and
-                securely
-              </q>
-            </p>
-          </div>
+            <q>
+              Having two years of experience as Project Engineer in Wipro.
+              Proven efficiency with an ability to quickly learn and creating an
+              environment for developing, quality assurance, staging and
+              deploying in production work can proceed efficiently and securely
+            </q>
+          </p>
         </div>
       </div>
     </div>

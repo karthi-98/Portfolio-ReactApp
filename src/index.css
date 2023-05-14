@@ -20,6 +20,22 @@ body {
   color: #f66b0e;
 }
 
+.activeEdu {
+  color: rgba(174, 62, 201, 0.7);
+}
+
+.activePS {
+  color: #40c057;
+}
+
+.activeCert {
+  color: #fab005;
+}
+
+.activeAS {
+  color: #7950f2;
+}
+
 .notActive {
   color: #eee;
 }

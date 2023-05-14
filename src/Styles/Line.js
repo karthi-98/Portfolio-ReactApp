@@ -7,10 +7,12 @@ const Line = (props) => {
     props.color === "violet"
       ? "rgba(174, 62, 201, .7)"
       : props.color === "green"
-      ? "green"
+      ? "#40c057"
       : props.color === "yellow"
-      ? "yellow"
-      : "";
+      ? "#fab005"
+      : props.color === "blue"
+      ? "#7950f2"
+      : "#f66b0e";
 
   const appRef = useRef();
   useLayoutEffect(() => {

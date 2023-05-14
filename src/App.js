@@ -8,6 +8,7 @@ import Education from "./Components/Education";
 import AnimationTest from "./Components/AnimationTest";
 import ProjSkills from "./Components/Projects & Skills/ProjSkills";
 import Certifications from "./Components/Certifications";
+import AboutSite from "./Components/AboutSite";
 
 function App() {
   const router = createBrowserRouter([
@@ -34,7 +35,7 @@ function App() {
         },
         {
           path: "about_site",
-          element: <Home />,
+          element: <AboutSite />,
         },
       ],
     },
